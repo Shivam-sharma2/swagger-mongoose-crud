@@ -329,9 +329,11 @@ CrudController.prototype = {
             });
             // this.logger.debug('Sending Response:: ' + JSON.stringify({ message: errors }));
         } else {
-            res.status(400).json({
-                message: [err.message]
-            });
+            if (!res.headersSent) {
+                res.status(400).json({
+                    message: [err.message]
+                });
+            }
         }
     },
     /**
