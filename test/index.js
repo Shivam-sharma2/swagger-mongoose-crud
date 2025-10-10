@@ -2,7 +2,7 @@
 /* global describe:false, it: false */
 var chai = require('chai');
 var expect = chai.expect;
-var Mongoose = require('mongoose');
+var Mongoose = require('@datanimbus/mongoose');
 var Crudder = require('../');
 Mongoose.connect('mongodb://localhost:27017/travis');
 

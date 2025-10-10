@@ -1,5 +1,5 @@
 'use strict';
-const mongoose = require('mongoose');
+const mongoose = require('@datanimbus/mongoose');
 const _ = require('lodash');
 const log4js = require('log4js');
 

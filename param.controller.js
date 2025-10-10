@@ -1,5 +1,5 @@
 var _ = require('lodash');
-var ObjectID = require('mongoose').Types.ObjectId;
+var ObjectID = require('@datanimbus/mongoose').Types.ObjectId;
 var util = require('util');
 var CrudController = require('./crud.controller');
 

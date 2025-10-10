@@ -4,7 +4,7 @@ var _ = require('lodash');
 var BaseController = require('./base.controller');
 var params = require('./swagger.params.map');
 
-var mongoose = require('mongoose');
+var mongoose = require('@datanimbus/mongoose');
 
 
 const transactionOptions = {

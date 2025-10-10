@@ -23,7 +23,7 @@ npm install @appveen/swagger-mongoose-crud --save
 
 ## Usage 
 ```javascript
-var Mongoose = require('Mongoose');
+var Mongoose = require('@datanimbus/mongoose');
 var SMCrud = require('swagger-mongoose-crud');
 //In your controller, simply expose the following
 var schema = new Mongoose.Schema({ 
