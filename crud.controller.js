@@ -363,7 +363,7 @@ CrudController.prototype = {
             filter['_metadata.deleted'] = false;
         return this.model
             .find(filter)
-            .count()
+            .countDocuments()
             .exec()
             .then(result => self.Okay(res, result))
             .catch(err => {
@@ -432,10 +432,10 @@ CrudController.prototype = {
                 docs = documents;
                 let promise = Promise.resolve();
                 if (metadata) {
-                    promise = this.model.count(filter)
+                    promise = this.model.countDocuments(filter)
                         .then(_c => {
                             matched = _c;
-                            return this.model.count()
+                            return this.model.countDocuments()
                         })
                         .then(_t => {
                             totalCount = _t;

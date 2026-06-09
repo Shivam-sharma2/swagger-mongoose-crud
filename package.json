@@ -1,6 +1,6 @@
 {
   "name": "@appveen/swagger-mongoose-crud",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Swagger Mongoose crud wrapper",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,9 @@
   ],
   "author": "Jerry M. <jerry@appveen.com>",
   "license": "MIT",
+  "peerDependencies": {
+    "mongoose": ">=6.0.0"
+  },
   "dependencies": {
     "lodash": "^4.17.21",
     "log4js": "^6.6.1"
