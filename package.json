@@ -14,9 +14,6 @@
   ],
   "author": "Jerry M. <jerry@appveen.com>",
   "license": "MIT",
-  "peerDependencies": {
-    "mongoose": ">=6.0.0"
-  },
   "dependencies": {
     "lodash": "^4.17.21",
     "log4js": "^6.6.1"
