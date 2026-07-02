@@ -117,7 +117,7 @@ function removeDocument(doc, req, type) {
                 })
                 .catch(err => resolve(null));
         } else {
-            doc.remove(req)
+            doc.deleteOne(req)
                 .then(() => {
                     resolve(doc.toObject());
                 })
@@ -895,7 +895,7 @@ CrudController.prototype = {
                     return;
                 }
                 document = doc;
-                return doc.remove(req);
+                return doc.deleteOne(req);
             })
             .then(() => {
                 var logObject = {
