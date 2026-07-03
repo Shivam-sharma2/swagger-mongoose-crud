@@ -895,6 +895,11 @@ CrudController.prototype = {
                     return;
                 }
                 document = doc;
+                // Set explicitly so deleteOne hooks can rely on this._req for
+                // the genuine request object; Mongoose does not reliably
+                // forward the argument passed to deleteOne() to hooks in the
+                // same shape (unlike the removed remove() method).
+                document._req = req;
                 return doc.deleteOne(req);
             })
             .then(() => {
