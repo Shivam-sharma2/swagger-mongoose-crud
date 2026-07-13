@@ -117,7 +117,8 @@ function removeDocument(doc, req, type) {
                 })
                 .catch(err => resolve(null));
         } else {
-            doc.deleteOne(req)
+            doc._req = req;
+            doc.deleteOne()
                 .then(() => {
                     resolve(doc.toObject());
                 })
